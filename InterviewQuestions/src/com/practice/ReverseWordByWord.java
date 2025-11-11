@@ -11,7 +11,7 @@ public class ReverseWordByWord {
         StringBuilder result = new StringBuilder();
         
         for (String word : words) {
-            String reversedWord = new StringBuilder(word).reverse().toString(); //reverseStringMethod(word);
+            String reversedWord = reverseStringMethod(word);//new StringBuilder(word).reverse().toString(); 
             result.append(reversedWord).append(" ");
         }
         System.out.println(result);

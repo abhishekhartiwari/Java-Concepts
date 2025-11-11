@@ -19,7 +19,7 @@ public class FindDuplicateElementInList {
         Set<String> uniqueNames = new HashSet<>();
 
         Set<String> duplicates = names.stream()
-            .filter(name -> !uniqueNames.add(name)) // `add` returns false if already exists
+            .filter(name -> uniqueNames.add(name)) // `add` returns false if already exists
             .collect(Collectors.toSet());
 
         System.out.println("Duplicates: " + duplicates);
